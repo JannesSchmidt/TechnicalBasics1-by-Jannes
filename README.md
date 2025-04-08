@@ -6,4 +6,4 @@ Here weekly Assignments will be uploaded and changes will understanably noted do
 
 
 ### Please read
-[https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.meme-arsenal.com%2Fen%2Fcreate%2Fmeme%2F5624608&psig=AOvVaw3FLd-EVWb5RA8Vnrln7_qp&ust=1744235271922000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDO4_G0yYwDFQAAAAAdAAAAABAT]
+![Meme](https://www.meme-arsenal.com/memes/cfb9957ba39213c6f4266022e9058480.jpg)

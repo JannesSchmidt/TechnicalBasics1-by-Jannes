@@ -1,4 +1,4 @@
-#README by Jannes Schmidt
+# README by Jannes Schmidt
 ## TechBasics 1
 
 This is the Repositorie of Jannes Schmidt, which has been created for the studies at Hamburg Media School.

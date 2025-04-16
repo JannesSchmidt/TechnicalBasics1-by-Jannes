@@ -19,7 +19,7 @@ cat_art = r"""
 
 tickets = 2
 
-print("Hey there, welcome to this minigame.") # starting sequence
+print("Hey there, welcome to this minigame.") # Starting sequence
 time.sleep(1.5)
 print("Please enter your name. Cookies are not optional.")
 time.sleep(1.5)
@@ -33,7 +33,7 @@ time.sleep(1.5)
 
 print("Your age is being processed. Please wait...")
 time.sleep(2)
-if age >= 100: # in case the age is to high
+if age >= 100: # In case the age is to high
     print("!!! Age to high !!!".upper())
     time.sleep(1.5)
     print("!!! Possible risk detected !!!".upper())
@@ -58,13 +58,13 @@ print("Downloading invisible textures...")
 time.sleep(1.5)
 print("Setting up games...")
 time.sleep(1.5)
-print("Realising this is taking to long...") # at this point I dont even now what I wanted to do with this xD
+print("Realising this is taking to long...") # At this point I don't even now what I wanted to do with this xD
 time.sleep(1.5)
 print("i: Synchronization completed.")
 time.sleep(3)
 print("______________________________________________________________")
 
-if age < 18: # to young
+if age < 18: # To young
     print("Sorry, this game is not available for you right now. Come back at a later point in time.")
     exit()
 else:
@@ -83,7 +83,7 @@ else:
 
     while tickets > 0:
         print("___________________________________________________________________")
-        print(f"\nYou have {tickets} ticket(s) left.")  # this line is AI-Generated
+        print(f"\nYou have {tickets} ticket(s) left.")  # This line is AI-Generated
         print("Now it's time to choose your minigame!")
         time.sleep(1)
         game = int(input("(1) Quiz, (2) Gambling, (3) ASCII-Art. Keep in mind each costs 1 ticket: "))
@@ -96,7 +96,7 @@ else:
             input('Press "Enter" when you\'re ready to start.')
             time.sleep(1)
 
-            if difficulty == 1: #easy
+            if difficulty == 1: # Easy
                 answer1 = input("Easy Question: How do you spell Sacrilegious: ")
                 if answer1 == "Sacrilegious":
                     print("Well obviously you knew that...")
@@ -112,7 +112,7 @@ else:
 
 
 
-            elif difficulty == 2: # medium
+            elif difficulty == 2: # Medium
                 answer2 = input("Medium Question: What is the capital of Hungary: ")
                 if answer2 == "Budapest" or "budapest":
                     print("Nice job! As a reward you get a heart:")
@@ -125,7 +125,7 @@ else:
                 else:
                     print("Nope it's Budapest")
 
-            elif difficulty == 3: # hard
+            elif difficulty == 3: # Hard
 
                 answer3 = int(input("Hard Question: How many seconds are in 7 days "))
                 if answer3 == 604800:
@@ -142,7 +142,7 @@ else:
             else:
                 print("Invalid difficulty level. You had one job...")
 
-        elif game == 2: # gambling that's why the user has to be over 18
+        elif game == 2: # Gambling that's why the user has to be over 18
             tickets -= 1
             print("Ah, a fellow gambling addict. I welcome you <3:")
             time.sleep(2)
@@ -181,7 +181,7 @@ else:
             print("Invalid game selection.")
             continue
 
-print(name, "you are out of tickets. You may leave now. Bye") # ending sequence
+print(name, "you are out of tickets. You may leave now. Bye") # Ending sequence
 time.sleep(2)
 print("Shutting down Server")
 time.sleep(2)

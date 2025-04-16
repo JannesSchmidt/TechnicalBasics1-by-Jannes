@@ -191,5 +191,5 @@ print("Score 10/10", age, "is a very cool person <3")
 time.sleep(2)
 print("__________________________________________________________________________________________")
 
-# credit for the help by the Tutors in the Digital Media Lab <3
-# adding notes besides important code was also their idea
+# Credit for the help by the Tutors in the Digital Media Lab <3
+# Adding notes besides important code was also their idea

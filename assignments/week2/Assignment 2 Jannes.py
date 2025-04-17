@@ -192,4 +192,4 @@ time.sleep(2)
 print("__________________________________________________________________________________________")
 
 # Credit for the help by the Tutors in the Digital Media Lab <3
-# Adding notes besides important code was also their idea
+# Adding notes besides important code was also their idea.

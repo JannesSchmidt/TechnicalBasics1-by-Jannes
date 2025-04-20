@@ -18,6 +18,7 @@ cat_art = r"""
 """
 
 tickets = 3 # ASCII-Art Generator
+
 print(r"""
 __        __   _                                   
 \ \      / /__| | ___ ___  _ __ ___   ___    

@@ -17,9 +17,17 @@ cat_art = r"""
  > ^ <
 """
 
-tickets = 2
+tickets = 3 # ASCII-Art Generator
+print(r"""
+__        __   _                                   
+\ \      / /__| | ___ ___  _ __ ___   ___    
+ \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \  
+  \ V  V /  __/ | (_| (_) | | | | | |  __/ 
+   \_/\_/ \___|_|\___\___/|_| |_| |_|\___|  
+""")
 
-print("Hey there, welcome to this minigame.") # starting sequence
+
+
 time.sleep(1.5)
 print("Please enter your name. Cookies are not optional.")
 time.sleep(1.5)
@@ -28,19 +36,27 @@ time.sleep(1)
 print(name, "before you can continue, we quickly have to confirm your age.")
 time.sleep(1.5)
 
-age = int(input("Please enter your age: "))
+
+while True:# To validate age input
+    try:
+        age = int(input("Please enter your age: "))
+        break
+    except ValueError:
+        print("That was not a valid number. Please enter your age using digits.")
+
 time.sleep(1.5)
 
 print("Your age is being processed. Please wait...")
 time.sleep(2)
-if age >= 100: # in case the age is to high
-    print("!!! Age to high !!!".upper())
+if age >= 125:  # In case the age is too high
+    print("!!! AGE TOO HIGH !!!")
     time.sleep(1.5)
-    print("!!! Possible risk detected !!!".upper())
+    print("!!! POSSIBLE RISK DETECTED !!!")
     time.sleep(1.5)
-    print("!!!!Server shutting down!!!!" .upper())
+    print("!!!! SERVER SHUTTING DOWN !!!!")
     time.sleep(2)
     quit()
+
 print("Counting days...")
 time.sleep(2)
 print(name, age * 365, "days old.")
@@ -58,19 +74,19 @@ print("Downloading invisible textures...")
 time.sleep(1.5)
 print("Setting up games...")
 time.sleep(1.5)
-print("Realising this is taking to long...") # at this point I dont even now what I wanted to do with this xD
+print("Realising this is taking too long...")
 time.sleep(1.5)
 print("i: Synchronization completed.")
 time.sleep(3)
-print("______________________________________________________________")
+print("___________________________________________________________________")
 
-if age < 18: # to young
+if age < 18:  # Too young
     print("Sorry, this game is not available for you right now. Come back at a later point in time.")
     exit()
 else:
     print("Access granted. Welcome!")
     time.sleep(1)
-    print("As a welcome gift, you're granted 2 tickets. Do you accept?")
+    print("As a welcome gift, you're granted 3 tickets. Do you accept?")
     time.sleep(1)
     accept = int(input("Do you accept the gift? 1 = Yes or 0 = No: "))
 
@@ -83,20 +99,27 @@ else:
 
     while tickets > 0:
         print("___________________________________________________________________")
-        print(f"\nYou have {tickets} ticket(s) left.")  # this line is AI-Generated
+        print(f"\nYou have {tickets} ticket(s) left.")  # This line is AI-Generated
         print("Now it's time to choose your minigame!")
         time.sleep(1)
         game = int(input("(1) Quiz, (2) Gambling, (3) ASCII-Art. Keep in mind each costs 1 ticket: "))
 
-        if game == 1: # Quiz
+        if game == 1:  # Quiz
             tickets -= 1
-            print("Choose difficulty: (1) Easy, (2) Medium, (3) Hard")
-            difficulty = int(input("Enter choice: "))
+            while True: # Difficulty + input validation
+                try:
+                    difficulty = int(input("Choose difficulty: (1) Easy, (2) Medium, (3) Hard: "))
+                    if 1 <= difficulty <= 3:
+                        break
+                    else:
+                        print("Difficulty must be between 1 and 3.")
+                except ValueError:
+                    print("That was not a valid number. Please enter 1, 2 or 3.")
 
             input('Press "Enter" when you\'re ready to start.')
             time.sleep(1)
 
-            if difficulty == 1: #easy
+            if difficulty == 1:  # Easy
                 answer1 = input("Easy Question: How do you spell Sacrilegious: ")
                 if answer1 == "Sacrilegious":
                     print("Well obviously you knew that...")
@@ -110,11 +133,9 @@ else:
                 else:
                     print("Shame on you. It literally said Sacrilegious")
 
-
-
-            elif difficulty == 2: # medium
+            elif difficulty == 2:  # Medium
                 answer2 = input("Medium Question: What is the capital of Hungary: ")
-                if answer2 == "Budapest" or "budapest":
+                if answer2.lower() == "budapest":
                     print("Nice job! As a reward you get a heart:")
                     time.sleep(2)
                     print("""
@@ -125,9 +146,8 @@ else:
                 else:
                     print("Nope it's Budapest")
 
-            elif difficulty == 3: # hard
-
-                answer3 = int(input("Hard Question: How many seconds are in 7 days "))
+            elif difficulty == 3:  # Hard
+                answer3 = int(input("Hard Question: How many seconds are in 7 days: "))
                 if answer3 == 604800:
                     print("That's correct. Nerd...")
                     print("As a reward you get a heart:")
@@ -139,10 +159,8 @@ else:
                                                  @  """)
                 else:
                     print("Nope, it's actually 604800.")
-            else:
-                print("Invalid difficulty level. You had one job...")
 
-        elif game == 2: # gambling that's why the user has to be over 18
+        elif game == 2:  # Gambling
             tickets -= 1
             print("Ah, a fellow gambling addict. I welcome you <3:")
             time.sleep(2)
@@ -158,7 +176,7 @@ else:
                 print("That was wrong. No luck today???")
                 time.sleep(2)
 
-        elif game == 3: # Art-Generator
+        elif game == 3:  # Art-Generator
             tickets -= 1
             print("ASCII-Art Generator! Choose your animal:")
             animal = input("Type 'dog' or 'cat': ")
@@ -181,15 +199,23 @@ else:
             print("Invalid game selection.")
             continue
 
-print(name, "you are out of tickets. You may leave now. Bye") # ending sequence
+print(name, "you are out of tickets. You may leave now. Bye")  # Ending sequence
 time.sleep(2)
-print("Shutting down Server")
+print("Shutting down Server...")
 time.sleep(2)
 print("Evaluating", name, "...")
 time.sleep(3)
-print("Score 10/10", age, "is a very cool person <3")
-time.sleep(2)
-print("__________________________________________________________________________________________")
+score = random.randint(0, 10)
+if score <=5:
+    message = f"Score {score}/10 - {name} is below our average... Sorry <3"
+elif score == 10:
+    message = f"Score {score}/10 - {name} is the coolest person ever <3"
+elif 5 < score < 10:
+    message = f"Score {score}/10 - {name} is a cool person <3"
+for word in message.split(): # online tutorial
+    print(word, end=' ', flush=True)
+    time.sleep(0.5)
+print("\n__________________________________________________________________________________________")
 
-# credit for the help by the Tutors in the Digital Media Lab <3
-# adding notes besides important code was also their idea
+# Credit for the help by the Tutors in the Digital Media Lab <3
+# Adding notes besides important code was also their idea.

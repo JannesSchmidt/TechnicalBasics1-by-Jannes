@@ -1,26 +1,57 @@
 import time
 import random
 
-DEBUG = False  # Set to True to skip name/age input for quick testing
+DEBUG = True  # Set to True to skip name/age input for quick testing
 
 
 def evaluate(score, mistakes): # Evaluation function
     return score - mistakes
+# ANSI color codes
+CYAN = '\033[96m'
+BLUE = '\033[94m'
+MAGENTA = '\033[95m'
+PINK = '\033[95m'
+RESET = '\033[0m'
 
-# ASCII Art
-dog_art = r"""
- /^ ^\
-/ 0 0 \
-V\ Y /V
- / - \
- |    \\
- || (__)
-"""
-cat_art = r"""
- /\_/\
+news = "i: Don't miss out on the new ASCII-Art."
+border = "." * (len(news) + 4)
+
+# Dog ASCII Art
+dog_art = f"""{CYAN}
+ /^ ^\\
+/ 0 0 \\
+V\\ Y /V
+ / - \\
+ |    \\\\
+ || (__) {RESET}"""
+
+# Cat ASCII Art
+cat_art = f"""{PINK}
+ /\\_/\\
 ( o.o )
- > ^ <
-"""
+ > ^ < {RESET}"""
+
+# Owl ASCII Art
+owl_art = f"""{MAGENTA}
+  ,_,      
+ (O,O)     
+ (   )     
+  " " {RESET}"""
+
+# Elephant ASCII Art
+elephant_art = f"""{BLUE}
+       _.-- ,.--.
+     .'   .'     /
+     | @       |'..--------._
+    /      \\._/              '.
+   /  .-.-                     \\
+  (  /    \\                     \\
+  \\      '.                  | #
+   \\       \\   -.           /
+    :\\       |    )._____.'   \\
+     "       |   /  \\  |  \\    )
+             |   |./'  :__ \\.-'
+             '--' {RESET}"""
 
 def main():
     # Game variables
@@ -109,15 +140,20 @@ __        __   _
             else:
                 print("You declined the tickets. They are free. You get them anyway ^-^")
                 time.sleep(2)
-
+    time.sleep(1)  # This segment can be changed
+    print("\n" + border)
+    print(f": {news} :")
+    print(border + "\n")
+    time.sleep(2)
     # Game loop
     while tickets > 0:
         print("___________________________________________________________________")
         print(f"\nYou have {tickets} ticket(s) left.")
-        print("Now it's time to choose your minigame!")
-        time.sleep(1.4)
+        print("It's time to choose your minigame!")
+
         try:
             game = int(input("(1) Quiz, (2) Gambling, (3) ASCII-Art. Keep in mind each costs 1 ticket: "))
+            print("\n")
         except ValueError:
             print("Invalid input.")
             mistakes += 1
@@ -212,17 +248,32 @@ __        __   _
         elif game == 3:
             tickets -= 1
             print("ASCII-Art Generator! Choose your animal:")
-            animal = input("Type 'dog' or 'cat': ")
-            if animal == "dog":
+            animal = int(input("(1) Dog (2) Cat (3) Elephant (4) Owl  or (5) print all for 3 Tickets: "))
+            if animal == 1:
                 print("*Generating your image*")
                 time.sleep(2)
                 print(dog_art)
                 time.sleep(2)
-            elif animal == "cat":
+            elif animal == 2:
                 print("*Generating your image*")
                 time.sleep(2)
                 print(cat_art)
                 time.sleep(2)
+            elif animal == 3:
+                    print("*Generating your image*")
+                    time.sleep(2)
+                    print(elephant_art)
+                    time.sleep(2)
+            elif animal == 4:
+                    print("*Generating your image*")
+                    time.sleep(2)
+                    print(owl_art)
+                    time.sleep(2)
+            elif animal == 5:
+                print("*Generating your images*")
+                time.sleep(2.5)
+                print(owl_art + "    " + dog_art + "    " + cat_art + "    " + "    " + elephant_art)
+                tickets -= 2
             else:
                 print("Invalid input :(")
                 mistakes += 1
@@ -260,7 +311,6 @@ __        __   _
     print("\n__________________________________________________________________________________________")
 
 
-# Entry point
 if __name__ == "__main__":
     main()
 

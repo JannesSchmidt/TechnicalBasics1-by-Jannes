@@ -78,6 +78,7 @@ def write_updated_csv(filename):
 
 
 if __name__ == "__main__":
+    # <<<<<<<<<<<<<< those may be changed >>>>>>>>>>>>>
     input_directory_path = r"C:\Users\schmi\OneDrive\Dokumente\!Uni\2 Semester\TechBasics 1"
 
     input_csv_base_filename = "Technical Basics I_2025 - Sheet1.csv"

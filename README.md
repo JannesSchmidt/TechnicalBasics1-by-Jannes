@@ -20,4 +20,13 @@ _Spoiler... It did not work._ 🥲
 
 
 ### Congrats!!! You've reached the end. Here is your reward:
+## New Memes below
 ![Meme](https://preview.redd.it/amitestingthiscode-v0-7jvo88ybivyd1.jpeg?auto=webp&s=f7321d2790e48bc73522a86a67dcdadb29ba8883)
+
+
+
+
+![meme3](https://media.licdn.com/dms/image/v2/D4D22AQHSOxiuIdwJBA/feedshare-shrink_800/feedshare-shrink_800/0/1691820576884?e=2147483647&v=beta&t=j7kM9z2mGxReJ3c7qJY-U04F6mIMvsTDSRsAPKCdpVg)
+
+
+![Meme2](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1BsdIWCP4iGn_7DljDMzE6gp2mNND_oiOMaS4SfJmsQ&s&ec=72940542)

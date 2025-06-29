@@ -8,7 +8,7 @@ win = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 FPS = 60
 
-# defining colors to safe time later
+# defining colors to safe time later, for the final assignment
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
